@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.NowPlayingFragment"
+    android:background="@color/cool_pink">
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imgSongNP"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:scaleType="centerCrop"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="5dp"
+        app:shapeAppearanceOverlay="@style/curved"
+        android:src="@drawable/music_player"/>
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/fbtnNextNP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        app:icon="@drawable/ic_next"
+        app:iconTint="@color/white"
+        android:backgroundTint="@color/cool_pink"
+        android:layout_centerVertical="true"
+        app:iconSize="40dp"
+        android:layout_marginEnd="10dp"
+        android:contentDescription="@string/next_btn"/>
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/fbtnPlayPauseNP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@id/fbtnNextNP"
+        app:icon="@drawable/play"
+        app:iconTint="@color/white"
+        android:backgroundTint="@color/cool_pink"
+        android:layout_centerVertical="true"
+        app:iconSize="40dp"
+        android:layout_marginHorizontal="5dp"
+        android:contentDescription="@string/play_pause_btn"/>
+    <TextView
+        android:id="@+id/tvSongNameNP"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="@string/song_name"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_toStartOf="@id/fbtnPlayPauseNP"
+        android:layout_toEndOf="@id/imgSongNP"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:singleLine="true"/>
+
+
+
+
+</RelativeLayout>

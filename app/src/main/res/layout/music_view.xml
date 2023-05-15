@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingStart="2dp"
+    android:paddingEnd="2dp"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:layout_marginBottom="5dp">
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imgMV"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@mipmap/ic_music_launcher"
+        app:shapeAppearanceOverlay="@style/curved"
+        app:strokeColor="@color/black"
+        android:scaleType="centerCrop"
+        android:layout_marginStart="5dp"/>
+    <TextView
+        android:id="@+id/tvSongNameMV"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="@string/song_name"
+        android:layout_toEndOf="@id/imgMV"
+        android:textColor="@color/black"
+        android:layout_toStartOf="@id/tvSongDuration"
+        android:layout_marginStart="5dp"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:ellipsize="end"/>
+    <TextView
+        android:id="@+id/tvSongAlbumMV"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:text="@string/song_album"
+        android:layout_toEndOf="@id/imgMV"
+        android:layout_toStartOf="@id/tvSongDuration"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="30dp"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:ellipsize="end"/>
+    <TextView
+        android:id="@+id/tvSongDuration"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="@string/start_tv"
+        android:textColor="@color/black"
+        android:layout_alignParentEnd="true"
+        android:gravity="center"
+        android:layout_marginHorizontal="5dp" />
+
+</RelativeLayout>

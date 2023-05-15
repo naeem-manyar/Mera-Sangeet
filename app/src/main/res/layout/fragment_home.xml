@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.HomeFragment">
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/search_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:queryHint="Search here ..."
+        app:iconifiedByDefault="false"
+        android:focusable="false"
+        android:layout_margin="5dp"
+        app:queryBackground="@android:color/transparent"
+        android:background="@drawable/custom_search_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/search_view"
+        android:scrollbars="vertical"
+        android:paddingBottom="40dp"
+        android:scrollbarThumbVertical="@drawable/ic_scroll_bar"/>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/nowPlaying"
+        android:name="com.naeem.musicplayer.fragment.NowPlayingFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout="@layout/fragment_now_playing" />
+</androidx.constraintlayout.widget.ConstraintLayout>

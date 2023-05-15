@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.FavouritesFragment">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvFavourites"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:scrollbarThumbVertical="@drawable/ic_scroll_bar"
+        android:scrollbars="vertical"
+        android:layout_marginTop="10dp"
+        android:paddingBottom="40dp"
+        />
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/btnShuffles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        app:icon="@drawable/ic_shuffle"
+        app:iconSize="35dp"
+        app:iconTint="@color/cool_pink"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.9"
+        app:strokeWidth="2dp"
+        app:strokeColor="@color/cool_pink"
+        android:contentDescription="@string/shuffle_btn"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

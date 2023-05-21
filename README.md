@@ -7,7 +7,7 @@ Mera-Sangeet is an offline music player Android app that offers a seamless liste
 
 
 ## Demo
-
+![](https://github.com/naeem-manyar/Mera-Sangeet/blob/master/mera-sangeet.gif)
 
 ## Features
 

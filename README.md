@@ -24,15 +24,7 @@ Mera-Sangeet is an offline music player Android app that offers a seamless liste
 - Android 10 Notification with Seekbar
 - Decent UI with New Material Widgets
 - And Much More....
-
-
-
-
-## Download
-Apk Link (Try it yourself)
-
-
     
 ## Feedback
 
-If you have any feedback, please reach out to us at 
+If you have any feedback, please reach out to us at mail

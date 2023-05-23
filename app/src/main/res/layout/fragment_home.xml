@@ -32,7 +32,7 @@
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/nowPlaying"
-        android:name="com.naeem.musicplayer.fragment.NowPlayingFragment"
+        android:name="com.naeem.merasangeet.fragment.NowPlayingFragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"

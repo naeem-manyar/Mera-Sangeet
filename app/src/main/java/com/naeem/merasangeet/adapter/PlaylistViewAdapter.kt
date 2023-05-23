@@ -1,5 +1,6 @@
-package com.naeem.musicplayer.adapter
+package com.naeem.merasangeet.adapter
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
@@ -10,10 +11,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
-import com.naeem.musicplayer.R
-import com.naeem.musicplayer.activity.PlaylistDetails
-import com.naeem.musicplayer.databinding.PlaylistViewBinding
-import com.naeem.musicplayer.fragment.PlaylistsFragment
+import com.naeem.merasangeet.R
+import com.naeem.merasangeet.activity.PlaylistDetails
+import com.naeem.merasangeet.databinding.PlaylistViewBinding
+import com.naeem.merasangeet.fragment.PlaylistsFragment
 
 class PlaylistViewAdapter (private val context: Context, private var playlistList:ArrayList<Playlist>): RecyclerView.Adapter<PlaylistViewAdapter.PlaylistViewHolder>() {
     inner class PlaylistViewHolder(binding: PlaylistViewBinding): RecyclerView.ViewHolder(binding.root){
@@ -66,6 +67,7 @@ class PlaylistViewAdapter (private val context: Context, private var playlistLis
                 .into(holder.image)
         }
     }
+    @SuppressLint("NotifyDataSetChanged")
     fun refreshPlaylist(){
         playlistList = ArrayList()
         playlistList.addAll(PlaylistsFragment.musicPlaylist.ref)

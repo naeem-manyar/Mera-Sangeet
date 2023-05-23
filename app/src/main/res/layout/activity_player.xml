@@ -31,7 +31,8 @@
             android:textColor="@color/black"
             android:textSize="20sp"
             android:gravity="center"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            tools:ignore="NestedWeights" />
         <ImageButton
             android:id="@+id/btnFav"
             android:layout_width="48dp"
@@ -118,7 +119,8 @@
             android:id="@+id/seekbar"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            tools:ignore="NestedWeights" />
         <TextView
             android:id="@+id/tvEndTime"
             android:layout_width="wrap_content"

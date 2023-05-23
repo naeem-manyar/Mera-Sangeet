@@ -1,4 +1,4 @@
-package com.naeem.musicplayer.activity
+package com.naeem.merasangeet.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -6,9 +6,9 @@ import android.widget.Toast
 import androidx.appcompat.widget.SearchView
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-import com.naeem.musicplayer.adapter.MusicAdapter
-import com.naeem.musicplayer.databinding.ActivitySelectionBinding
-import com.naeem.musicplayer.fragment.HomeFragment
+import com.naeem.merasangeet.adapter.MusicAdapter
+import com.naeem.merasangeet.databinding.ActivitySelectionBinding
+import com.naeem.merasangeet.fragment.HomeFragment
 import java.util.*
 import kotlin.collections.ArrayList
 

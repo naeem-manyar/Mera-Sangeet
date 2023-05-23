@@ -1,8 +1,8 @@
-package com.naeem.musicplayer.adapter
+package com.naeem.merasangeet.adapter
 
 import android.media.MediaMetadataRetriever
-import com.naeem.musicplayer.activity.PlayerActivity
-import com.naeem.musicplayer.fragment.FavouritesFragment
+import com.naeem.merasangeet.activity.PlayerActivity
+import com.naeem.merasangeet.fragment.FavouritesFragment
 import java.io.File
 import java.util.concurrent.TimeUnit
 import kotlin.system.exitProcess

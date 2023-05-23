@@ -1,4 +1,4 @@
-package com.naeem.musicplayer.activity
+package com.naeem.merasangeet.activity
 
 import android.annotation.SuppressLint
 import android.content.ComponentName
@@ -23,14 +23,14 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
-import com.naeem.musicplayer.R
-import com.naeem.musicplayer.adapter.*
-import com.naeem.musicplayer.databinding.ActivityPlayerBinding
-import com.naeem.musicplayer.fragment.FavouritesFragment
-import com.naeem.musicplayer.fragment.HomeFragment
-import com.naeem.musicplayer.fragment.HomeFragment.Companion.musicListSearch
-import com.naeem.musicplayer.fragment.PlaylistsFragment
-import com.naeem.musicplayer.services.MusicService
+import com.naeem.merasangeet.R
+import com.naeem.merasangeet.adapter.*
+import com.naeem.merasangeet.databinding.ActivityPlayerBinding
+import com.naeem.merasangeet.fragment.FavouritesFragment
+import com.naeem.merasangeet.fragment.HomeFragment
+import com.naeem.merasangeet.fragment.HomeFragment.Companion.musicListSearch
+import com.naeem.merasangeet.fragment.PlaylistsFragment
+import com.naeem.merasangeet.services.MusicService
 
 class PlayerActivity : AppCompatActivity(),ServiceConnection,MediaPlayer.OnCompletionListener{
     companion object{
@@ -215,10 +215,10 @@ class PlayerActivity : AppCompatActivity(),ServiceConnection,MediaPlayer.OnCompl
     private fun getMusicDetails(contentUri: Uri): Music {
         var cursor: Cursor? = null
         try {
-            var projection = arrayOf(MediaStore.Audio.Media.DATA,MediaStore.Audio.Media.DURATION)
+            val projection = arrayOf(MediaStore.Audio.Media.DATA,MediaStore.Audio.Media.DURATION)
             cursor = this.contentResolver.query(contentUri,projection,null,null,null)
-            var dataColumn = cursor?.getColumnIndexOrThrow(MediaStore.Audio.Media.DATA)
-            var durationColumn = cursor?.getColumnIndexOrThrow(MediaStore.Audio.Media.DURATION)
+            val dataColumn = cursor?.getColumnIndexOrThrow(MediaStore.Audio.Media.DATA)
+            val durationColumn = cursor?.getColumnIndexOrThrow(MediaStore.Audio.Media.DURATION)
 
             cursor!!.moveToFirst()
             val path = dataColumn?.let { cursor.getString(it) }

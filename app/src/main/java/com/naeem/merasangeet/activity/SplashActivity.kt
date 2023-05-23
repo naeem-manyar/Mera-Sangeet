@@ -1,11 +1,13 @@
-package com.naeem.musicplayer.activity
+package com.naeem.merasangeet.activity
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
-import com.naeem.musicplayer.R
+import com.naeem.merasangeet.R
 
+@SuppressLint("CustomSplashScreen")
 class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -1,4 +1,4 @@
-package com.naeem.musicplayer.fragment
+package com.naeem.merasangeet.fragment
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,18 +8,18 @@ import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
-import com.naeem.musicplayer.activity.PlayerActivity
-import com.naeem.musicplayer.adapter.FavouritesAdapter
-import com.naeem.musicplayer.adapter.Music
-import com.naeem.musicplayer.adapter.checkPlaylist
-import com.naeem.musicplayer.databinding.FragmentFavouritesBinding
+import com.naeem.merasangeet.activity.PlayerActivity
+import com.naeem.merasangeet.adapter.FavouritesAdapter
+import com.naeem.merasangeet.adapter.Music
+import com.naeem.merasangeet.adapter.checkPlaylist
+import com.naeem.merasangeet.databinding.FragmentFavouritesBinding
 
 class FavouritesFragment : Fragment() {
 
     private var _binding: FragmentFavouritesBinding? = null
     // This property is only valid between onCreateView and onDestroyView.
     private val binding get() = _binding!!
-    lateinit var favouritesAdapter: FavouritesAdapter
+    private lateinit var favouritesAdapter: FavouritesAdapter
     companion object{
         var favouriteSongs:ArrayList<Music> = ArrayList()
     }
@@ -28,7 +28,7 @@ class FavouritesFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentFavouritesBinding.inflate(inflater, container, false)
         favouriteSongs = checkPlaylist(favouriteSongs)
         binding.rvFavourites.setHasFixedSize(true)

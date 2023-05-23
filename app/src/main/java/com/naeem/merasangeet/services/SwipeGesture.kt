@@ -1,4 +1,4 @@
-package com.naeem.musicplayer.services
+package com.naeem.merasangeet.services
 
 //noinspection SuspiciousImport
 import android.R
@@ -11,8 +11,8 @@ import it.xabaras.android.recyclerview.swipedecorator.RecyclerViewSwipeDecorator
 
 
 abstract class SwipeGesture(context: Context):ItemTouchHelper.SimpleCallback(0,ItemTouchHelper.LEFT) {
-    val deleteColor = ContextCompat.getColor(context,R.color.holo_red_dark)
-    val deleteIcon = R.drawable.ic_menu_delete
+    private val deleteColor = ContextCompat.getColor(context,R.color.holo_red_dark)
+    private val deleteIcon = R.drawable.ic_menu_delete
     override fun onMove(
         recyclerView: RecyclerView,
         viewHolder: RecyclerView.ViewHolder,

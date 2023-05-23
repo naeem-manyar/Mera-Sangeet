@@ -1,4 +1,4 @@
-package com.naeem.musicplayer.activity
+package com.naeem.merasangeet.activity
 
 import android.annotation.SuppressLint
 import android.content.DialogInterface
@@ -16,12 +16,12 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.gson.GsonBuilder
-import com.naeem.musicplayer.R
-import com.naeem.musicplayer.services.SwipeGesture
-import com.naeem.musicplayer.adapter.MusicAdapter
-import com.naeem.musicplayer.adapter.checkPlaylist
-import com.naeem.musicplayer.databinding.ActivityPlaylistDetailsBinding
-import com.naeem.musicplayer.fragment.PlaylistsFragment
+import com.naeem.merasangeet.R
+import com.naeem.merasangeet.services.SwipeGesture
+import com.naeem.merasangeet.adapter.MusicAdapter
+import com.naeem.merasangeet.adapter.checkPlaylist
+import com.naeem.merasangeet.databinding.ActivityPlaylistDetailsBinding
+import com.naeem.merasangeet.fragment.PlaylistsFragment
 
 class PlaylistDetails : AppCompatActivity() {
     lateinit var binding: ActivityPlaylistDetailsBinding
@@ -29,6 +29,7 @@ class PlaylistDetails : AppCompatActivity() {
 
     companion object {
         var currentPlaylistPos: Int = -1
+        @SuppressLint("StaticFieldLeak")
         lateinit var removeLayout: LinearLayout
     }
 
@@ -90,7 +91,7 @@ class PlaylistDetails : AppCompatActivity() {
     }
 
 
-    @SuppressLint("SetTextI18n")
+    @SuppressLint("SetTextI18n", "NotifyDataSetChanged")
     override fun onResume() {
         super.onResume()
         binding.tvPlaylistNamePD.text =

@@ -1,15 +1,15 @@
-package com.naeem.musicplayer.services
+package com.naeem.merasangeet.services
 
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
-import com.naeem.musicplayer.R
-import com.naeem.musicplayer.activity.PlayerActivity
-import com.naeem.musicplayer.adapter.favouriteChecker
-import com.naeem.musicplayer.adapter.setSongPosition
-import com.naeem.musicplayer.fragment.NowPlayingFragment
+import com.naeem.merasangeet.R
+import com.naeem.merasangeet.activity.PlayerActivity
+import com.naeem.merasangeet.adapter.favouriteChecker
+import com.naeem.merasangeet.adapter.setSongPosition
+import com.naeem.merasangeet.fragment.NowPlayingFragment
 
 class NotificationReceiver:BroadcastReceiver() {
     override fun onReceive(context: Context?, intent: Intent?) {

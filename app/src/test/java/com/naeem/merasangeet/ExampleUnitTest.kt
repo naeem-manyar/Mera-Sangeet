@@ -1,4 +1,4 @@
-package com.naeem.musicplayer
+package com.naeem.merasangeet
 
 import org.junit.Test
 

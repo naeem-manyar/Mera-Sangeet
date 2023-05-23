@@ -1,4 +1,4 @@
-package com.naeem.musicplayer.adapter
+package com.naeem.merasangeet.adapter
 
 import android.content.Context
 import android.content.Intent
@@ -8,9 +8,9 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
-import com.naeem.musicplayer.R
-import com.naeem.musicplayer.activity.PlayerActivity
-import com.naeem.musicplayer.databinding.FavouritesViewBinding
+import com.naeem.merasangeet.R
+import com.naeem.merasangeet.activity.PlayerActivity
+import com.naeem.merasangeet.databinding.FavouritesViewBinding
 
 class FavouritesAdapter (private val context: Context, private var musicList:ArrayList<Music>): RecyclerView.Adapter<FavouritesAdapter.FavouritesViewHolder>() {
     inner class FavouritesViewHolder(binding: FavouritesViewBinding): RecyclerView.ViewHolder(binding.root){

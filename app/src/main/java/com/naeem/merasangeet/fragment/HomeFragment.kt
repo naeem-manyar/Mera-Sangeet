@@ -1,4 +1,4 @@
-package com.naeem.musicplayer.fragment
+package com.naeem.merasangeet.fragment
 
 import android.annotation.SuppressLint
 import android.net.Uri
@@ -12,10 +12,10 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.naeem.musicplayer.R
-import com.naeem.musicplayer.adapter.Music
-import com.naeem.musicplayer.adapter.MusicAdapter
-import com.naeem.musicplayer.databinding.FragmentHomeBinding
+import com.naeem.merasangeet.R
+import com.naeem.merasangeet.adapter.Music
+import com.naeem.merasangeet.adapter.MusicAdapter
+import com.naeem.merasangeet.databinding.FragmentHomeBinding
 import java.io.File
 import java.util.*
 
@@ -37,7 +37,7 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -53,7 +53,7 @@ class HomeFragment : Fragment() {
         if (activity != null)
             musicAdapter = MusicAdapter(requireContext(),musicListMA)
         binding.rv.adapter = musicAdapter
-        var divider = DividerItemDecoration(context,RecyclerView.VERTICAL)
+        val divider = DividerItemDecoration(context,RecyclerView.VERTICAL)
         ResourcesCompat.getDrawable(resources,R.drawable.divider,null)?.let {
             divider.setDrawable(it)
         }

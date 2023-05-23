@@ -1,5 +1,6 @@
-package com.naeem.musicplayer.fragment
+package com.naeem.merasangeet.fragment
 
+import android.annotation.SuppressLint
 import android.content.DialogInterface
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,12 +10,12 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
-import com.naeem.musicplayer.R
-import com.naeem.musicplayer.adapter.MusicPlaylist
-import com.naeem.musicplayer.adapter.Playlist
-import com.naeem.musicplayer.adapter.PlaylistViewAdapter
-import com.naeem.musicplayer.databinding.AddPlaylistDialogBinding
-import com.naeem.musicplayer.databinding.FragmentPlaylistsBinding
+import com.naeem.merasangeet.R
+import com.naeem.merasangeet.adapter.MusicPlaylist
+import com.naeem.merasangeet.adapter.Playlist
+import com.naeem.merasangeet.adapter.PlaylistViewAdapter
+import com.naeem.merasangeet.databinding.AddPlaylistDialogBinding
+import com.naeem.merasangeet.databinding.FragmentPlaylistsBinding
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -23,7 +24,7 @@ class PlaylistsFragment : Fragment() {
     private var _binding: FragmentPlaylistsBinding? = null
     // This property is only valid between onCreateView and onDestroyView.
     private val binding get() = _binding!!
-    lateinit var playlistAdapter: PlaylistViewAdapter
+    private lateinit var playlistAdapter: PlaylistViewAdapter
     companion object{
         var musicPlaylist:MusicPlaylist = MusicPlaylist()
     }
@@ -31,7 +32,7 @@ class PlaylistsFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentPlaylistsBinding.inflate(inflater, container, false)
         binding.rvPlaylist.setHasFixedSize(true)
         binding.rvPlaylist.setItemViewCacheSize(13)
@@ -84,6 +85,7 @@ class PlaylistsFragment : Fragment() {
         }
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     override fun onResume() {
         super.onResume()
         playlistAdapter.notifyDataSetChanged()

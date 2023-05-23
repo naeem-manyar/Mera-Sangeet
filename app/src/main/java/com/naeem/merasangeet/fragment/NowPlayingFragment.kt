@@ -1,4 +1,4 @@
-package com.naeem.musicplayer.fragment
+package com.naeem.merasangeet.fragment
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -10,10 +10,10 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
-import com.naeem.musicplayer.R
-import com.naeem.musicplayer.activity.PlayerActivity
-import com.naeem.musicplayer.adapter.setSongPosition
-import com.naeem.musicplayer.databinding.FragmentNowPlayingBinding
+import com.naeem.merasangeet.R
+import com.naeem.merasangeet.activity.PlayerActivity
+import com.naeem.merasangeet.adapter.setSongPosition
+import com.naeem.merasangeet.databinding.FragmentNowPlayingBinding
 
 class NowPlayingFragment : Fragment() {
     companion object {
@@ -27,7 +27,7 @@ override fun onCreateView(
     inflater: LayoutInflater,
     container: ViewGroup?,
     savedInstanceState: Bundle?
-): View? {
+): View {
     _binding = FragmentNowPlayingBinding.inflate(inflater, container, false)
     binding.root.visibility = View.INVISIBLE
     binding.fbtnPlayPauseNP.setOnClickListener {

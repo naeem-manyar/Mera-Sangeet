@@ -1,4 +1,4 @@
-package com.naeem.musicplayer.activity
+package com.naeem.merasangeet.activity
 
 import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
@@ -8,18 +8,18 @@ import androidx.core.app.ActivityCompat
 import androidx.fragment.app.Fragment
 import com.google.gson.GsonBuilder
 import com.google.gson.reflect.TypeToken
-import com.naeem.musicplayer.R
-import com.naeem.musicplayer.adapter.Music
-import com.naeem.musicplayer.adapter.MusicPlaylist
-import com.naeem.musicplayer.adapter.exitApplication
-import com.naeem.musicplayer.databinding.ActivityMainBinding
-import com.naeem.musicplayer.fragment.FavouritesFragment
-import com.naeem.musicplayer.fragment.HomeFragment
-import com.naeem.musicplayer.fragment.PlaylistsFragment
+import com.naeem.merasangeet.R
+import com.naeem.merasangeet.adapter.Music
+import com.naeem.merasangeet.adapter.MusicPlaylist
+import com.naeem.merasangeet.adapter.exitApplication
+import com.naeem.merasangeet.databinding.ActivityMainBinding
+import com.naeem.merasangeet.fragment.FavouritesFragment
+import com.naeem.merasangeet.fragment.HomeFragment
+import com.naeem.merasangeet.fragment.PlaylistsFragment
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var binding:ActivityMainBinding
+    private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)

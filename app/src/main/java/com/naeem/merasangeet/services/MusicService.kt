@@ -1,4 +1,4 @@
-package com.naeem.musicplayer.services
+package com.naeem.merasangeet.services
 
 import android.annotation.SuppressLint
 import android.app.PendingIntent
@@ -12,12 +12,12 @@ import android.support.v4.media.MediaMetadataCompat
 import android.support.v4.media.session.MediaSessionCompat
 import android.support.v4.media.session.PlaybackStateCompat
 import androidx.core.app.NotificationCompat
-import com.naeem.musicplayer.R
-import com.naeem.musicplayer.activity.MainActivity
-import com.naeem.musicplayer.activity.PlayerActivity
-import com.naeem.musicplayer.adapter.formatDuration
-import com.naeem.musicplayer.adapter.getImgArt
-import com.naeem.musicplayer.fragment.NowPlayingFragment
+import com.naeem.merasangeet.R
+import com.naeem.merasangeet.activity.MainActivity
+import com.naeem.merasangeet.activity.PlayerActivity
+import com.naeem.merasangeet.adapter.formatDuration
+import com.naeem.merasangeet.adapter.getImgArt
+import com.naeem.merasangeet.fragment.NowPlayingFragment
 
 class MusicService: Service(),AudioManager.OnAudioFocusChangeListener {
     private var myBinder = MyBinder()

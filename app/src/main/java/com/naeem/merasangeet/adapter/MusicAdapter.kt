@@ -1,4 +1,4 @@
-package com.naeem.musicplayer.adapter
+package com.naeem.merasangeet.adapter
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -11,15 +11,15 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
-import com.naeem.musicplayer.R
-import com.naeem.musicplayer.activity.PlayerActivity
-import com.naeem.musicplayer.activity.PlaylistDetails
-import com.naeem.musicplayer.activity.SelectionActivity
-import com.naeem.musicplayer.databinding.MusicViewBinding
-import com.naeem.musicplayer.fragment.HomeFragment.Companion.search
-import com.naeem.musicplayer.fragment.PlaylistsFragment
+import com.naeem.merasangeet.R
+import com.naeem.merasangeet.activity.PlayerActivity
+import com.naeem.merasangeet.activity.PlaylistDetails
+import com.naeem.merasangeet.activity.SelectionActivity
+import com.naeem.merasangeet.databinding.MusicViewBinding
+import com.naeem.merasangeet.fragment.HomeFragment.Companion.search
+import com.naeem.merasangeet.fragment.PlaylistsFragment
 
-class MusicAdapter(private val context:Context, var musicList:ArrayList<Music>,private val playlistDetails:Boolean = false,private val selectionActivity:Boolean = false): RecyclerView.Adapter<MusicAdapter.MusicViewHolder>() {
+class MusicAdapter(private val context:Context, private var musicList:ArrayList<Music>, private val playlistDetails:Boolean = false, private val selectionActivity:Boolean = false): RecyclerView.Adapter<MusicAdapter.MusicViewHolder>() {
     inner class MusicViewHolder(binding: MusicViewBinding) : ViewHolder(binding.root) {
         val title = binding.tvSongNameMV
         val album = binding.tvSongAlbumMV
@@ -103,11 +103,13 @@ class MusicAdapter(private val context:Context, var musicList:ArrayList<Music>,p
         PlaylistsFragment.musicPlaylist.ref[PlaylistDetails.currentPlaylistPos].playlist.add(song)
         return true
     }
+    @SuppressLint("NotifyDataSetChanged")
     fun deleteItem(i:Int){
         musicList.removeAt(i)
         notifyDataSetChanged()
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     fun refreshPlaylist(){
         musicList = ArrayList()
         musicList.addAll(PlaylistsFragment.musicPlaylist.ref[PlaylistDetails.currentPlaylistPos].playlist)

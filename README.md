@@ -1,9 +1,10 @@
-# Mera Sangeet
+# Mera Sangeet 🎵
 
 ![Status](https://img.shields.io/badge/Status-Active-brightgreen)
 ![Kotlin](https://img.shields.io/badge/Kotlin-100%25-brightgreen)
 ![build](https://img.shields.io/badge/build-passing-brightgreen)
 ![dependencies](https://img.shields.io/badge/dependencies-up%20to%20date-brightgreen)
+![license](https://img.shields.io/badge/license-MIT-blue)
 
 Mera-Sangeet is an offline music player Android app that offers a seamless listening experience without an internet connection. Enjoy your favorite songs anytime, create playlists, customize audio with an equalizer, and benefit from features like a sleep timer and background playing. With its intuitive UI and new material widgets, Mera-Sangeet enhances your offline music experience on Android.
 
